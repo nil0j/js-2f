@@ -247,21 +247,21 @@ async function createPokemon({
 
         ctx.font = "bold 20px sans-serif";
         ctx.fillText("Impactrueno", 50, 350);
-        ctx.fillText("80", 330, 350);
+        ctx.fillText("60", 330, 350);
 
         let options = [
-            "Pobreza",
-            "Madrileños",
-            "Bocatito de calamares",
-            "Crema catalana",
-            "Tumba de Franco",
-            "Tortilla de patatas",
-            "Inflacion",
-            "Pisos turisticos",
-            "Pedro Sanchez estuvo aqui",
+            ["Madrileños", 120 ],
+            ["Bocatito de calamares", 70 ],
+            ["Crema catalana", 80 ],
+            ["Croquetas", 90 ],
+            ["Tortilla de patatas", 100 ],
+            ["Inflacion", 150 ],
+            ["Pisos turisticos", 200 ],
+            ["Pedro Sanchez estuvo aqui", 1000 ],
         ]
-        ctx.fillText(options[Math.floor(Math.random() * options.length)], 50, 390);
-        ctx.fillText("150", 330, 390);
+        let option = options[Math.floor(Math.random() * options.length)]
+        ctx.fillText(option[0], 50, 390);
+        ctx.fillText(option[1], 330, 390);
 
         if (stage == 1) {
             ctx.font = "bold 25px sans-serif";
