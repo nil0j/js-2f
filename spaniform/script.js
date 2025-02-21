@@ -222,6 +222,7 @@ async function createPokemon({
     previous = undefined,
 }) {
     let cover = await getSingleImage(name)
+    console.log("previous is ", previous)
 
     let previousSrc
     if (previous != undefined) {
@@ -250,14 +251,14 @@ async function createPokemon({
         ctx.fillText("60", 330, 350);
 
         let options = [
-            ["Madrileños", 120 ],
-            ["Bocatito de calamares", 70 ],
-            ["Crema catalana", 80 ],
-            ["Croquetas", 90 ],
-            ["Tortilla de patatas", 100 ],
-            ["Inflacion", 150 ],
-            ["Pisos turisticos", 200 ],
-            ["Pedro Sanchez estuvo aqui", 1000 ],
+            ["Madrileños", 120],
+            ["Bocatito de calamares", 70],
+            ["Crema catalana", 80],
+            ["Croquetas", 90],
+            ["Tortilla de patatas", 100],
+            ["Inflacion", 150],
+            ["Pisos turisticos", 200],
+            ["Pedro Sanchez estuvo aqui", 1000],
         ]
         let option = options[Math.floor(Math.random() * options.length)]
         ctx.fillText(option[0], 50, 390);
@@ -271,22 +272,23 @@ async function createPokemon({
         // Add images
         let image = createImage(cover)
         image.onload = _ => {
-            ctx.drawImage(image, 30, 50, 365, 250)
+            ctx.drawImage(image, 30, 60, 365, 250)
 
             if (previous != undefined) {
-                let image2 = createImage(previousSrc)
-                image2.className = "image-previous"
-                image2.onload = _ => {
-                    ctx.drawImage(image2, 20, 40, 50, 50)
-                }
-
+                let last = stage == 2 ? PROVINCE : CCAA
+                console.log("last is ", last)
+                ctx.font = "bold 15px sans-serif";
+                ctx.fillText(`Evoluciona de ${last.value}`, 80, 60);
             }
-
-            let last = stage == 2 ? PROVINCE : CCAA
-            ctx.fillText(`Evoluciona de ${last}`, 100, 200);
-
         }
 
+        if (previous != undefined) {
+            let image2 = createImage(previousSrc)
+            image2.className = "image-previous"
+            image2.onload = _ => {
+                ctx.drawImage(image2, 20, 40, 50, 50)
+            }
+        }
     };
 
     switch (stage) {
