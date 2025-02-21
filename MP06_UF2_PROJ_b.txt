@@ -1,0 +1,19 @@
+Instruccions: Entregar enllaç de repo publicat a GitHub Pages
+                                       
+                               APIs de NAVEGADOR
+                                       
+Tasca 2  -  Afegeix una funcionalitat extra a l'aplicació desenvolupada a la tasca 1.  La funcionalitat és totalment oberta, però ha de complir el següents requisits funcionals i tecnològics:
+
+ Ha d'estar integrada amb la funcionalitat prèvia (mostrar les imatges d'una població d'Espanya).
+    
+ Ha d'incloure en la seva implementació l'ús d'una API de navegador. Pot ser alguna d'aquesta llista [HYPERLINK:
+ https://developer.mozilla.org/en-US/docs/Web/API
+ ], o pot ser una altra que no s'hagi fet servir a l'assignatura fins ara.
+
+    
+ L'aplicació ha d'explicar l'ús que s'ha fet d'aquesta API de navegador d'una manera visual, integrada en el frontend (modal, tooltip, menú...).
+
+ES VALORARÀ L'ORIGINALITAT, LA RELLEVÀNCIA I LA COMPLEXITAT DE LA FUNCIONALITAT AFEGIDA.
+    
+
+>>> L'aplicació s'ha de publicar en GitHub Pages i s'entrega la URL del repositori.

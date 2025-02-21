@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="font-awesome/resource.svg"></img>
+        <p id="resources"></p>
+        <span>|</span>
+        <img src="font-awesome/calendar-days.svg"></img>
+        <p id="date"></p>
+        <span>|</span>
+        <img src="font-awesome/clock-regular.svg"></img>
+        <p id="time"></p>
+        <span>|</span>
+        <img id="battery-image" src="font-awesome/battery-full.svg"></img>
+        <p id="battery"></p>
+    </header>
+
+    <div class="spider-speaks">
+    <p>
+Funcionalitat:
+    </p>
+
+    <ul>
+        <li>
+Mostrar mapa interactiu
+        </li>
+        <li>
+Calcular la distancia entre la localitzacio i la poblacio seleccionada
+        </li>
+        <li>
+Mostrar informacio del sistema
+        </li>
+        <li>
+Mostrar una carta pokemon de la poblacio
+        </li>
+        <li>
+Pantalla completa a la carta pokemon (al clicar)
+        </li>
+    </ul>
+    </div>
+
+    <img src="potatoes.jpg" id="potatoes" alt="">
+
+    <h1>Descubre España</h1>
+    <form action="">
+        <label>Comunitat: </label><select required name="ccaa" id="ccaa">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <label>Província: </label><select required name="province" id="provincia">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <label>Població: </label><select required name="population" id="poblacion">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <input type="submit" value="ENVIAR" id="submit">
+    </form>
+    <div id="image-container"></div>
+    <div id="map" style="width:500px; height:250px;"></div>
+    <p id="map-info"></p>
+
+    <canvas id="canvas" style="width:500px"></canvas>
+</body>
+
+<script src="OpenLayers/OpenLayers.js"></script>
+<script src="script.js"></script>
+
+</html>

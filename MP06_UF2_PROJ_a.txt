@@ -1,0 +1,16 @@
+                             CONTROL DE FORMULARIS
+                                       
+Tasca 1  -  Crea un formulari de quatre camps:
+-Input:text per a Nom complet
+-Select per a llista de Comunitats Autònomes.
+    S'ha d'emplenar automàticament (AL CARREGAR LA PÀGINA) a partir del JSON:
+    https://raw.githubusercontent.com/frontid/ComunidadesProvinciasPoblaciones/refs/heads/master/ccaa.json
+-Select per a llista de Províncies.
+    S'ha d'emplenar automàticament (AL SELECCIONAR UNA COMUNITAT AUTÒNOMA) a partir del JSON:
+    https://raw.githubusercontent.com/frontid/ComunidadesProvinciasPoblaciones/refs/heads/master/provincias.json
+-Select per a llista de Poblacions.
+    S'ha d'emplenar automàticament (AL SELECCIONAR UNA PROVÍNCIA) a partir del JSON:
+    https://raw.githubusercontent.com/frontid/ComunidadesProvinciasPoblaciones/refs/heads/master/poblaciones.json
+Al clicar el botó de submit, s'ha d'interrompre l'enviament del formulari i, com a acció alternativa, s'ha de demanar a l'API de Wikimedia les 10 primeres fotos de la població seleccionada:
+    https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=images&titles=${encodeURIComponent(poblacio)}&gimlimit=10&prop=imageinfo&iiprop=url [HYPERLINK: https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=images&titles=$%7bencodeURIComponent(poblacio)%7d&gimlimit=10&prop=imageinfo&iiprop=url]
+    i mostrar en el DOM les imatges descarregades. Si no hi ha cap foto de la població triada, mostrar un missatge informatiu al DOM.
